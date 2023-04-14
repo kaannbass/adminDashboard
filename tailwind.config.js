@@ -4,11 +4,14 @@ module.exports = {
   purge: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
-    "flowbite/plugin",
   ],
-  content: ["./node_modules/flowbite/**/*.js"],
+  content: [
+    "./node_modules/flowbite/**/*.js"
+],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+]
 };

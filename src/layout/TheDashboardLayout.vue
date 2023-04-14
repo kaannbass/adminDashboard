@@ -19,10 +19,10 @@ export default defineComponent({
   <div class="relative flex min-h-screen">
     <!--Sidebar-->
     <div
-      class="bg-cyan-600 text-cyan-50 w-64 space-y-2 px-2 absolute inset-y-0 left-0 md:relative md:-translate-x-0 transform -translate-x-full transition duration-200 ease-in-out"
-      :class="{'md:relative -translate-x-0' : showSidebar  }"
+      class="bg-cyan-600 text-cyan-50 w-64 space-y-2 px-2 py-2 absolute inset-y-0 left-0 lg:relative lg:-translate-x-0 transform -translate-x-full transition duration-200 ease-in-out"
+      :class="{ 'relative -translate-x-1': showSidebar }"
     >
-      <router-link class="flex item-center space-x-2 py-1 px-2" to="/home">
+      <div class="flex item-center space-x-2 py-1 px-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -38,7 +38,7 @@ export default defineComponent({
           />
         </svg>
         <span class="text-2xl text-white">MyDashboard</span>
-      </router-link>
+      </div>
       <hr />
       <nav class="p-1">
         <router-link
@@ -110,28 +110,48 @@ export default defineComponent({
     <!--Main Content-->
     <div class="flex-1">
       <!--Header-->
-      <div class="bg-white shadow px-2 py-4 flex">
-        <button 
-        @click="showSidebar = !showSidebar"
-        class="text-cyan-600 font-extrabold">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-8 h-8"
+      <div class="bg-white shadow px-2 py-4 flex lg:h-[65px] justify-between">
+        <div class="">
+          <button
+            @click="showSidebar = !showSidebar"
+            class="text-cyan-600 font-extrabold lg:hidden"
+            :class="{
+              ' transition-transform duration-200 rotate-180': showSidebar,
+            }"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class=" cursor-pointer" @click="this.$router.push('/')">
+          <div class="flex items-center space-x-4">
+            <div class="font-medium dark:text-white">
+              <div>Kaan Baş</div>
+              <div class="text-sm text-gray-500 dark:text-gray-400">
+                Joined in April 2023
+              </div>
+            </div>
+            <img
+              class="w-10 h-10 rounded-full"
+              src="https://media.licdn.com/dms/image/C4D03AQFQhEXmca8rSA/profile-displayphoto-shrink_800_800/0/1605862956409?e=2147483647&v=beta&t=v-Z-TfeM_U8dIELYiwhXOzRcXIU1ZmU-MlINpbi1zcU"
+              alt=""
             />
-          </svg>
-        </button>
-      
+          </div>
+        </div>
       </div>
-      
+
       <!--Content-->
       <div class="p-8">
         <slot></slot>
@@ -139,3 +159,9 @@ export default defineComponent({
     </div>
   </div>
 </template>
+
+<style scoped>
+.router-link-active {
+  background-color: rgb(14 116 144);
+}
+</style>
