@@ -1,18 +1,15 @@
-// Path: src\layouts\TheDefaultLayout.vue
-
 <script lang="ts">
 import { defineComponent } from "vue";
 
 export default defineComponent({
-    name: "TheDefaultLayout",
+  name: "TheDefaultLayout",
 });
 </script>
 
 <template>
-    <v-layout>
-        <v-main>
-            <h2>TheDefaultLayout</h2>
-            <slot></slot>
-        </v-main>
-    </v-layout>
+  <div class="bg-gradient-to-tr from-cyan-300 via-sky-400 to-sky-500 min-h-screen">
+    <div class="container grid justify-items-center mx-auto py-10">
+      <slot></slot>
+    </div>
+  </div>
 </template>

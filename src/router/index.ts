@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import TheDashboardLayoutVue from '@/layout/TheDashboardLayout.vue'
 import TheDefaultLayoutVue from '@/layout/TheDefaultLayout.vue'
 
@@ -15,7 +14,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/home',
     name: 'Home',
-    component: HomeView,
+    component: () => import(/* webpackChunkName: "about" */ '../views/HomeView.vue'),
     meta: {
       layout: TheDashboardLayoutVue
     }
