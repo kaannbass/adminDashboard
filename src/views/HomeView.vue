@@ -1,18 +1,27 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <div class="grid lg:grid-cols-4 gap-4 grid-cols-1">
+      <div class="" v-for="a in 4" :key="a">
+        <MyCard :icon="icons" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-
+import { defineComponent } from "vue";
+import MyCard from "@/components/MyCard.vue";
 export default defineComponent({
-  name: 'HomeView',
+  name: "HomeView",
   components: {
-    HelloWorld,
+    MyCard,
   },
+  data: () => ({
+    icons: [
+      {
+        path: "M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941",
+      },
+    ],
+  }),
 });
 </script>
