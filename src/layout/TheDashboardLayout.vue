@@ -19,8 +19,8 @@ export default defineComponent({
   <div class="relative flex min-h-screen">
     <!--Sidebar-->
     <div
-      class="bg-cyan-600 text-cyan-50 w-64 space-y-2 px-2 py-2 absolute inset-y-0 left-0 xl:relative xl:-translate-x-0 transform -translate-x-full transition duration-200 ease-in-out"
-      :class="{ 'relative -translate-x-1': showSidebar }"
+      class="bg-cyan-600 md:relative md:-translate-x-0 text-cyan-50 w-64 space-y-2 px-2 py-2 absolute inset-y-0 left-0 transform -translate-x-full transition duration-200 ease-in-out"
+      :class="{ 'relative -translate-x-2': showSidebar }"
     >
       <div class="flex item-center space-x-2 py-1 px-2">
         <svg

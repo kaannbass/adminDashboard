@@ -1,13 +1,10 @@
 <template>
-      <img src="@/assets/logo.png" class="mx-auto" alt="" />
-
+  <img src="@/assets/logo.png" class="mx-auto" alt="" />
   <div
-    class="text-center min-w-[35%] max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700"
+    class="text-center lg:min-w-[35%] w-[70%] max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700"
   >
     <form class="space-y-6" action="#">
-      <h5 class="text-xl font-medium text-gray-900 dark:text-white">
-        Sign in to our My Dashboard Admin Platform
-      </h5>
+      <h5 class="text-3xl font-medium text-gray-900 dark:text-white">Login</h5>
       <div>
         <label
           for="email"
@@ -55,11 +52,13 @@
             >Remember me</label
           >
         </div>
-        <a
+        <button
+          @click="this.$router.push('/lostpassword')"
           href="#"
           class="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500"
-          >Lost Password?</a
         >
+          Lost Password?
+        </button>
       </div>
       <button
         type="submit"
@@ -71,7 +70,7 @@
       <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
         Not registered?
         <button
-        @click="this.$router.push('/register')"
+          @click="this.$router.push('/register')"
           class="text-blue-700 hover:underline dark:text-blue-500"
         >
           Create account

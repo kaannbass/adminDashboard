@@ -1,10 +1,10 @@
 <template>
   <img src="@/assets/logo.png" class="mx-auto" alt="" />
   <div
-    class="text-center lg:min-w-[35%] md:min-w-[45%] max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700"
+    class="text-center lg:min-w-[35%] w-[70%] max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700"
   >
     <form class="space-y-3" action="#">
-      <h2 class="text-lg font-medium text-gray-900 dark:text-white">
+      <h2 class="text-3xl font-medium text-gray-900 dark:text-white">
         Create a new account
       </h2>
       <h4>It's quick and easy.</h4>

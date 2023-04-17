@@ -21,6 +21,14 @@ const routes: Array<RouteRecordRaw> = [
     }
   },
   {
+    path: '/lostpassword',
+    name: 'Lostpassword',
+    component: () => import('../views/Auth/LostPassword.vue'),
+    meta: {
+      layout: TheDefaultLayoutVue
+    }
+  },
+  {
     path: '/home',
     name: 'Home',
     component: () => import('../views/HomeView.vue'),
