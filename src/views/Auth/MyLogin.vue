@@ -1,8 +1,9 @@
 <template>
+      <img src="@/assets/logo.png" class="mx-auto" alt="" />
+
   <div
     class="text-center min-w-[35%] max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700"
   >
-    <img src="@/assets/logo.png" class="mx-auto" alt="" />
     <form class="space-y-6" action="#">
       <h5 class="text-xl font-medium text-gray-900 dark:text-white">
         Sign in to our My Dashboard Admin Platform
@@ -69,9 +70,12 @@
       </button>
       <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
         Not registered?
-        <a href="#" class="text-blue-700 hover:underline dark:text-blue-500"
-          >Create account</a
+        <button
+        @click="this.$router.push('/register')"
+          class="text-blue-700 hover:underline dark:text-blue-500"
         >
+          Create account
+        </button>
       </div>
       <div class="inline-flex items-center justify-center w-full">
         <hr class="w-64 h-px bg-gray-200 border-0 dark:bg-gray-700" />
@@ -79,6 +83,22 @@
           class="absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900"
           >or</span
         >
+      </div>
+      <div class="flex flex-col items-center">
+        <div class="flex space-x-1">
+          <a
+            href="#"
+            class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
+          >
+            <img src="@/assets/loginIcon/google.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
+          >
+            <img src="@/assets/loginIcon/facebook.svg" alt="" />
+          </a>
+        </div>
       </div>
     </form>
   </div>

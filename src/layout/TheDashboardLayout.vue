@@ -19,8 +19,8 @@ export default defineComponent({
   <div class="relative flex min-h-screen">
     <!--Sidebar-->
     <div
-      class="bg-cyan-600 text-cyan-50 w-64 space-y-2 px-2 py-2 absolute inset-y-0 left-0 lg:relative lg:-translate-x-0 transform -translate-x-full transition duration-200 ease-in-out"
-      :class="{ 'relative -translate-x-2': showSidebar }"
+      class="bg-cyan-600 text-cyan-50 w-64 space-y-2 px-2 py-2 absolute inset-y-0 left-0 xl:relative xl:-translate-x-0 transform -translate-x-full transition duration-200 ease-in-out"
+      :class="{ 'relative -translate-x-1': showSidebar }"
     >
       <div class="flex item-center space-x-2 py-1 px-2">
         <svg
@@ -110,11 +110,11 @@ export default defineComponent({
     <!--Main Content-->
     <div class="flex-1">
       <!--Header-->
-      <div class="bg-white shadow px-2 py-4 flex lg:h-[65px] justify-between">
+      <div class="bg-white shadow px-2 py-4 flex xl:h-[65px] justify-between">
         <div class="">
           <button
             @click="showSidebar = !showSidebar"
-            class="text-cyan-600 font-extrabold lg:hidden"
+            class="text-cyan-600 font-extrabold xl:hidden"
             :class="{
               ' transition-transform duration-200 rotate-180': showSidebar,
             }"

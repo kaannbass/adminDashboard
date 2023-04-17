@@ -3,10 +3,19 @@ import TheDashboardLayoutVue from '@/layout/TheDashboardLayout.vue'
 import TheDefaultLayoutVue from '@/layout/TheDefaultLayout.vue'
 
 const routes: Array<RouteRecordRaw> = [
+  
   {
     path: '/',
     name: 'Login',
-    component: () => import(/* webpackChunkName: "about" */ '../views/MyLogin.vue'),
+    component: () => import('../views//Auth/MyLogin.vue'),
+    meta: {
+      layout: TheDefaultLayoutVue
+    }
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('../views/Auth/MyRegister.vue'),
     meta: {
       layout: TheDefaultLayoutVue
     }
@@ -14,7 +23,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/home',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "about" */ '../views/HomeView.vue'),
+    component: () => import('../views/HomeView.vue'),
     meta: {
       layout: TheDashboardLayoutVue
     }
@@ -22,7 +31,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/about',
     name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
+    component: () => import('../views/AboutView.vue'),
     meta: {
       layout: TheDashboardLayoutVue
     }

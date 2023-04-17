@@ -13,8 +13,6 @@ app.use(store);
 app.use(router);
 app.use(pinia);
 
-
 app.config.globalProperties.axios = axios;
-
 
 app.mount('#app');
