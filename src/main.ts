@@ -6,6 +6,10 @@ import '@/css/index.css';
 import axios from 'axios';
 import { createPinia } from 'pinia';
 
+
+import { Chart, DoughnutController, ArcElement, Tooltip } from 'chart.js';
+Chart.register(DoughnutController, ArcElement, Tooltip);
+
 const app = createApp(App);
 const pinia = createPinia()
 

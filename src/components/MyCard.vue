@@ -1,8 +1,8 @@
 <template>
   <div
-    class="w-full cursor-default flex p-2 text-center shadow-lg bg-green-400 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300"
+    class="w-full cursor-default rounded-md flex p-2 text-center shadow-lg bg-green-400 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300"
   >
-    <div class="text-white" v-for="(item, index) in icon" :key="index">
+    <div class="text-white m-auto my-auto" v-for="(item, index) in icon" :key="index">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -14,8 +14,8 @@
         <path stroke-linecap="round" stroke-linejoin="round" :d="item.path" />
       </svg>
     </div>
-    <div class="text-white">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    <div class="text-white m-auto">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis nostrum rerum enim sequi amet dolore asperiores, assumenda cumque consequatur dignissimos eaque placeat magni, vero, quibusdam quo. Tempora iste consectetur alias.
     </div>
   </div>
 </template>
