@@ -28,7 +28,7 @@
  alt="Kaan Baş">
                     <div class="pl-3">
                         <div class="text-base font-semibold">Kaan Baş</div>
-                        <div class="font-normal text-gray-500">baskaan9@gmail.com</div>
+                        <div class="font-normal text-gray-500">@gmail.com</div>
                     </div>  
                 </th>
                 <td class="px-6 py-4">
