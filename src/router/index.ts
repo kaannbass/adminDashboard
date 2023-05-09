@@ -43,6 +43,14 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       layout: TheDashboardLayoutVue
     }
+  },
+  {
+    path: '/api',
+    name: 'api',
+    component: () => import('../views/api.vue'),
+    meta: {
+      layout: TheDashboardLayoutVue
+    }
   }
 ]
 
